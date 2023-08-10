@@ -12,24 +12,38 @@ body {
 .container {
     height: 60vh;
     width: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
 }
 
 .numpad {
     height: 100%;
     width: auto;
+    display: grid;
+    gap: 5px;
+    grid-template-columns:  repeat(4, 1fr);;
+    grid-template-rows:  repeat(5, 1fr);;
+}
+#btn-clear,
+#btn-delete {
+    grid-column: span 2;
 }
 
+.op {
+}
 .digit {
-    margin: 0.5em;
     padding: 0;
     height: 4em;
     width: 4em;
 }
 
 .display {
-    margin: 1em;
-    padding: 1em;
     height: 3em;
-    width: auto;
+    width: 92%;
+    margin: 1em;
     background-color: gray;
+    border: 2px solid black;
 }
