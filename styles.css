@@ -1,0 +1,35 @@
+body {
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.display {
+    height: 10vh;
+    width: 100%;
+}
+.container {
+    height: 60vh;
+    width: 40vh;
+}
+
+.numpad {
+    height: 100%;
+    width: auto;
+}
+
+.digit {
+    margin: 0.5em;
+    padding: 0;
+    height: 4em;
+    width: 4em;
+}
+
+.display {
+    margin: 1em;
+    padding: 1em;
+    height: 3em;
+    width: auto;
+    background-color: gray;
+}
