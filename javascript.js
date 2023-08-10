@@ -36,9 +36,9 @@ function operate(a, b, operator) {
   return result;
 }
 
-module.exports = {
-  add,
-  subtract,
-  divide,
-  multiply,
-};
+// module.exports = {
+//   add,
+//   subtract,
+//   divide,
+//   multiply,
+// };

@@ -1,7 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./media/fonts/Roboto-Bold.ttf') format(truetype);
+  }
+
 body {
     background-color: #ddd;
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
 }
 
 .main {
@@ -11,7 +19,7 @@ body {
     align-items: center;
 }
 .display {
-    height: 10vh;
+    height: 13vh;
     width: 100%;
 }
 .container {
