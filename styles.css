@@ -27,6 +27,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
+
 }
 .display {
     height: auto;
@@ -137,15 +139,15 @@ button {
 }
 
 footer {
-    position: absolute;
     bottom: 0;
+    left: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     width: 100%;
     padding: 10px;
-    left: 0;
+    font-size: 20px;
 }
 
 
