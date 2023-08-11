@@ -1,5 +1,15 @@
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --github-color: #222;
+    --salmon-color: #FA8072;
+    --delete-teal: #00BBD7;
+    --clear-teal: rgba(0, 128, 128, 0.744);
+    --clear-hover: rgba(15, 58, 58, 0.898);
+    --delete-hover: rgba(20, 83, 83, 0.898);
 }
 
 @font-face {
@@ -8,8 +18,7 @@
   }
 
 body {
-    background-color: #ddd;
-    /* font-family: 'Roboto', sans-serif; */
+    background-color: white;
 }
 
 .main {
@@ -30,13 +39,13 @@ button {
 .container {
     margin-top: 3em;
     padding: 1em;
-    
+    background-color: #aaaaaa4d;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid black;
-    border-radius: 6px;
+    border-radius: 15px;
 
 }
 
@@ -46,13 +55,36 @@ button {
     grid-template-columns:  repeat(4, 1fr);;
     grid-template-rows:  repeat(5, 1fr);;
 }
-#btn-clear,
+#btn-clear {
+    grid-column: span 2;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: var(--clear-teal);
+    color: white;
+}
 #btn-delete {
     grid-column: span 2;
     border: 2px solid black;
     border-radius: 4px;
+    background-color: var(--delete-teal);
+    color: white;
 }
 
+#btn-clear:hover {
+    background-color: var(--clear-hover);
+}
+
+#btn-clear:active {
+    background-color: var(--clear-teal);
+}
+
+#btn-delete:hover {
+    background-color: var(--delete-hover);
+}
+
+#btn-delete:active {
+    background-color: var(--delete-teal);
+}
 
 .btn {
     border: 2px solid black;
@@ -60,19 +92,20 @@ button {
     padding: 0;
     height: 3.5em;
     width: 4em;
+    background-color: var(--salmon-color);
+    color: white;
 }
 
+/* #btn-delete:hover,
+#btn-clear:hover, */
 
-#btn-delete:hover,
-#btn-clear:hover,
 .btn:hover {
-    background-color: #ddddddb3;
+    background-color: rgba(183, 30, 13, 0.811);
 }
-/* #btn-delete:active,
-#btn-clear:active,
+
 .btn:active {
-    background-color: #dddddd14;
-} */
+    background-color: var(--salmon-color);;
+}
 
 .display {
     margin-bottom: 1em;
@@ -81,4 +114,27 @@ button {
     border: 2px solid black;
     border-radius: 6px;
 
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    left: 0;
+}
+
+
+.fa-github {
+  color: var(--github-color);
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
 }
