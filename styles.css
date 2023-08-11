@@ -10,6 +10,7 @@
     --clear-teal: rgba(0, 128, 128, 0.744);
     --clear-hover: rgba(15, 58, 58, 0.898);
     --delete-hover: rgba(20, 83, 83, 0.898);
+    --bg-color: #aaaaaa88;
 }
 
 @font-face {
@@ -28,8 +29,9 @@ body {
     align-items: center;
 }
 .display {
-    height: 16vh;
+    height: auto;
     width: 100%;
+
 }
 
 button {
@@ -39,15 +41,15 @@ button {
 .container {
     margin-top: 3em;
     padding: 1em;
-    background-color: #aaaaaa4d;
+    background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid black;
     border-radius: 15px;
-
-}
+    width: 20em;
+ }
 
 .numpad {
     display: grid;
@@ -109,11 +111,29 @@ button {
 
 .display {
     margin-bottom: 1em;
-
+    padding: 0.7em;
     background-color: white;
     border: 2px solid black;
     border-radius: 6px;
+    word-wrap: break-word;
+    /* word-break: break-all; */
+}
 
+.current-operation {
+    text-align: right;
+    font-size: 2.5rem;
+    height: 1em;
+}
+
+.last-operation {
+    min-height: 0.5em;
+}
+
+.last-operation {
+    text-align: right;
+    min-height: 2em;
+    font-size: 2.5rem;
+    
 }
 
 footer {

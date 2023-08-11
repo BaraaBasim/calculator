@@ -12,26 +12,29 @@
 <body>
     <div class="main">
         <div class="container">
-            <div class="display"></div>
+            <div class="display">
+                <div class="last-operation"></div>
+                <div class="current-operation">0</div>
+            </div>
             <div class="numpad">
                 <button class="" id="btn-clear"> CLEAR </button>
                 <button class="" id="btn-delete"> DELETE </button>
-                <button class="btn">7</button>
-                <button class="btn">8</button>
-                <button class="btn">9</button>
-                <button class="btn">÷</button>
-                <button class="btn">4</button>
-                <button class="btn">5</button>
-                <button class="btn">6</button>
-                <button class="btn">x</button>
-                <button class="btn">1</button>
-                <button class="btn">2</button>
-                <button class="btn">3</button>
-                <button class="btn">-</button>
+                <button class="btn" date-number="7">7</button>
+                <button class="btn" date-number="8">8</button>
+                <button class="btn" date-number="9">9</button>
+                <button class="btn" data-operator="/">÷</button>
+                <button class="btn" date-number="4">4</button>
+                <button class="btn" date-number="5">5</button>
+                <button class="btn" date-number="6">6</button>
+                <button class="btn" data-operator="*">x</button>
+                <button class="btn" date-number="1">1</button>
+                <button class="btn" date-number="2">2</button>
+                <button class="btn" date-number="3">3</button>
+                <button class="btn" data-operator="-">-</button>
                 <button class="btn">.</button>
-                <button class="btn">0</button>
-                <button class="btn">=</button>
-                <button class="btn">+</button>
+                <button class="btn" date-number="0">0</button>
+                <button class="btn" data-operator="=">=</button>
+                <button class="btn" data-operator="+">+</button>
             </div>
         </div>
     </div>
