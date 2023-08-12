@@ -107,9 +107,6 @@ button {
     color: white;
 }
 
-/* #btn-delete:hover,
-#btn-clear:hover, */
-
 .btn:hover {
     background-color: rgba(183, 30, 13, 0.811);
 }
