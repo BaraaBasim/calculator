@@ -9,8 +9,10 @@ const currentScreen = document.querySelector(".current-operation");
 const equalsBtn = document.getElementById("equalBtn");
 const lastScreen = document.querySelector(".last-operation");
 const clearBtn = document.getElementById("btn-clear");
+const deleteBtn = document.getElementById("btn-delete");
+const pointBtn = document.getElementById("btn-point");
 equalsBtn.addEventListener("click", evaluate);
-
+deleteBtn.addEventListener("click", deleteNumber);
 operatorBtns.forEach((button) => {
   button.addEventListener("click", () => setOperation(button.textContent));
 });
@@ -20,11 +22,24 @@ numberBtns.forEach((button) => {
   });
 });
 
+pointBtn.addEventListener("click", appendPoint);
+
 clearBtn.addEventListener("click", clearScreen);
 
 function resetScreen() {
   currentScreen.textContent = "";
   shouldResetScreen = false;
+}
+
+function deleteNumber() {
+  currentScreen.textContent = currentScreen.textContent.toString().slice(0, -1);
+}
+
+function appendPoint() {
+  if (shouldResetScreen) resetScreen();
+  if (currentScreen.textContent === "") currentScreen.textContent = "0";
+  if (currentScreen.textContent.includes(".")) return;
+  currentScreen.textContent += ".";
 }
 
 function appendNumber(num) {
@@ -34,7 +49,7 @@ function appendNumber(num) {
 
 function evaluate() {
   if (currentOperation === null || shouldResetScreen) return;
-  if (currentOperation === "÷" && currentOperationScreen.textContent === "0") {
+  if (currentOperation === "÷" && currentScreen.textContent === "0") {
     alert("You can't divide by 0!");
     return;
   }

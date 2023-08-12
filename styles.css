@@ -30,6 +30,11 @@ body {
     margin-bottom: 100px;
 
 }
+
+.last-operation {
+    font-size: 20px;
+}
+
 .display {
     height: auto;
     width: 100%;
@@ -118,23 +123,21 @@ button {
     border: 2px solid black;
     border-radius: 6px;
     word-wrap: break-word;
-    /* word-break: break-all; */
+    word-break: break-all;
+
 }
 
 .current-operation {
     text-align: right;
     font-size: 2.5rem;
-    height: 1em;
-}
-
-.last-operation {
-    min-height: 0.5em;
+    height: auto;
+    min-height: 100%;
 }
 
 .last-operation {
     text-align: right;
     min-height: 2em;
-    font-size: 2.5rem;
+    font-size: 1.3rem;
     
 }
 
