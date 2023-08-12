@@ -126,4 +126,7 @@ function operate(operator, a, b) {
 //   subtract,
 //   divide,
 //   multiply,
+//   appendPoint,
+//   appendNumber,
+//   deleteNumber,
 // };
